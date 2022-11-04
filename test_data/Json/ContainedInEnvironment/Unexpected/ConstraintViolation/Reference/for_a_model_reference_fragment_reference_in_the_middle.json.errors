@@ -1,0 +1,1 @@
+.submodels[0].semanticId: Constraint AASd-126: For model references with more than one key, the type of the last key in the reference key chain may be one of Generic fragment keys or no key at all shall have a value out of Generic fragment keys.

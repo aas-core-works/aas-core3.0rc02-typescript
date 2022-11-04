@@ -1,0 +1,3 @@
+.submodels[0].semanticId: Constraint AASd-121: For References the type of the first key shall be one of Globally identifiables.
+.submodels[0].semanticId: Constraint AASd-122: For global references the type of the first key shall be one of Generic globally identifiables.
+.submodels[0].semanticId: Constraint AASd-124: For global references the last key shall be either one of Generic globally identifiables or one of Generic fragment keys.

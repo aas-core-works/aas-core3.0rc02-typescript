@@ -1,0 +1,25 @@
+{
+  "assetAdministrationShells": [
+    {
+      "assetInformation": {
+        "assetKind": "Instance",
+        "specificAssetIds": [
+          {
+            "externalSubjectId": {
+              "keys": [
+                {
+                  "type": "GlobalReference",
+                  "value": "something_random_8406b4e1"
+                }
+              ],
+              "type": "GlobalReference"
+            },
+            "value": "something_random_4f886934"
+          }
+        ]
+      },
+      "id": "something_random_428f0205",
+      "modelType": "AssetAdministrationShell"
+    }
+  ]
+}

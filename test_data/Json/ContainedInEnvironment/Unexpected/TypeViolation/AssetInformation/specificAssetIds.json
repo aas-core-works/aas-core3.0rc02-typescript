@@ -1,0 +1,24 @@
+{
+  "assetAdministrationShells": [
+    {
+      "assetInformation": {
+        "assetKind": "Instance",
+        "defaultThumbnail": {
+          "path": "file:/path/to/somewhere"
+        },
+        "globalAssetId": {
+          "keys": [
+            {
+              "type": "GlobalReference",
+              "value": "something_random_0e76b5cc"
+            }
+          ],
+          "type": "GlobalReference"
+        },
+        "specificAssetIds": "Unexpected string value"
+      },
+      "id": "something_random_428f0205",
+      "modelType": "AssetAdministrationShell"
+    }
+  ]
+}

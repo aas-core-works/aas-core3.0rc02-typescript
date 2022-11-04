@@ -1,0 +1,15 @@
+{
+  "submodels": [
+    {
+      "id": "something_random_b0c234ba",
+      "modelType": "Submodel",
+      "submodelElements": [
+        {
+          "contentType": "\uda86\udf2e\udb69\udf6e\udae1\udefa7\u001e\u00fd\u00d1\u009d|\udbc6\uddcd",
+          "idShort": "some_id_short_10b21b1b",
+          "modelType": "File"
+        }
+      ]
+    }
+  ]
+}

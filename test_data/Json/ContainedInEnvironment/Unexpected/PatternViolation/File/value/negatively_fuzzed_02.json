@@ -1,0 +1,16 @@
+{
+  "submodels": [
+    {
+      "id": "something_random_b0c234ba",
+      "modelType": "Submodel",
+      "submodelElements": [
+        {
+          "contentType": "application/something-random",
+          "idShort": "some_id_short_10b21b1b",
+          "modelType": "File",
+          "value": "t#\u00e1\udbcc\udd8fXM~\u00f9\u00cc\u00f8\u009e\ud8f2\uddd1"
+        }
+      ]
+    }
+  ]
+}

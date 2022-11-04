@@ -1,0 +1,2 @@
+.assetAdministrationShells[0].assetInformation.defaultThumbnail.path: Constraint AASd-100: An attribute with data type ``string`` is not allowed to be empty.
+.assetAdministrationShells[0].assetInformation.defaultThumbnail.path: The value must represent a valid file URI scheme according to RFC 8089.

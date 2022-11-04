@@ -1,0 +1,7 @@
+dist/
+node_modules/
+venv*/
+__pycache__/
+*.pyc
+coverage/
+doc-local/

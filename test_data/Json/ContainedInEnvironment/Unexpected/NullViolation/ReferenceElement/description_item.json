@@ -1,0 +1,17 @@
+{
+  "submodels": [
+    {
+      "id": "something_random_b0c234ba",
+      "modelType": "Submodel",
+      "submodelElements": [
+        {
+          "description": [
+            null
+          ],
+          "idShort": "some_id_short_10b21b1b",
+          "modelType": "ReferenceElement"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "assetAdministrationShells": [
+    {
+      "administration": {
+        "embeddedDataSpecifications": [
+          {
+            "dataSpecification": {
+              "keys": [
+                {
+                  "type": "GlobalReference",
+                  "value": "something_random_6d9ab579"
+                }
+              ],
+              "type": "GlobalReference"
+            },
+            "dataSpecificationContent": {
+              "definition": [
+                {
+                  "language": "en",
+                  "text": "something_random_1d37b9a5"
+                }
+              ],
+              "modelType": "DataSpecificationPhysicalUnit",
+              "unitName": "something_random_f2c42ef6",
+              "unitSymbol": "something_random_839ea974"
+            }
+          }
+        ],
+        "revision": {
+          "keys": [
+            {
+              "type": "GlobalReference",
+              "value": "something_random_b1ba0055"
+            }
+          ],
+          "type": "GlobalReference"
+        },
+        "version": "something_random_3c186758"
+      },
+      "assetInformation": {
+        "assetKind": "Instance"
+      },
+      "id": "something_random_428f0205",
+      "modelType": "AssetAdministrationShell"
+    }
+  ]
+}

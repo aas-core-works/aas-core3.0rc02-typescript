@@ -1,0 +1,17 @@
+{
+  "submodels": [
+    {
+      "id": "some_submodel",
+      "modelType": "Submodel",
+      "semanticId": {
+        "keys": [
+          {
+            "type": "Blob",
+            "value": "something"
+          }
+        ],
+        "type": "ModelReference"
+      }
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: aas-core3.0rc02-typescript-testgen
+Version: 0.0.1
+Summary: Generate the code of the unit tests on an AAS meta-model.
+Home-page: https://github.com/aas-core-works/aas-core3.0rc02-typescript
+Author: Marko Ristin
+Author-email: marko@ristin.ch
+License: License :: OSI Approved :: MIT License
+Keywords: asset administration shell code generation industry 4.0 industrie i4.0
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+
+UNKNOWN
+

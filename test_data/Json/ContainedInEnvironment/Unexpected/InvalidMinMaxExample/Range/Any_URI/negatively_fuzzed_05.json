@@ -1,0 +1,17 @@
+{
+  "submodels": [
+    {
+      "id": "something_random_b0c234ba",
+      "modelType": "Submodel",
+      "submodelElements": [
+        {
+          "idShort": "some_id_short_10b21b1b",
+          "max": "''\u00ff\udbe3\udc1a\uc3b8\u00c8\u00ba\u00ab\u00d9",
+          "min": "''\u00ff\udbe3\udc1a\uc3b8\u00c8\u00ba\u00ab\u00d9",
+          "modelType": "Range",
+          "valueType": "xs:anyURI"
+        }
+      ]
+    }
+  ]
+}

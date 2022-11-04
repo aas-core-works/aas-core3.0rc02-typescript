@@ -1,0 +1,15 @@
+{
+  "submodels": [
+    {
+      "id": "something_random_b0c234ba",
+      "modelType": "Submodel",
+      "qualifiers": [
+        {
+          "type": "something_random_cfd39ba4",
+          "value": "-0005-02-29T01:02:03",
+          "valueType": "xs:dateTime"
+        }
+      ]
+    }
+  ]
+}

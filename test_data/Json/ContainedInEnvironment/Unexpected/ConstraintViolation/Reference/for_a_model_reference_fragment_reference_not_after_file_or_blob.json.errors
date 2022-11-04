@@ -1,0 +1,1 @@
+.submodels[0].semanticId: Constraint AASd-127: For model references with more than one key, a key with type Fragment reference shall be preceded by a key with type File or Blob.

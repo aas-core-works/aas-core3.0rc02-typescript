@@ -1,0 +1,36 @@
+{
+  "submodels": [
+    {
+      "id": "something_random_b0c234ba",
+      "kind": "Template",
+      "modelType": "Submodel",
+      "qualifiers": [
+        {
+          "kind": "TemplateQualifier",
+          "semanticId": {
+            "keys": [
+              {
+                "type": "GlobalReference",
+                "value": "something_random_2a0817be"
+              }
+            ],
+            "type": "GlobalReference"
+          },
+          "supplementalSemanticIds": "Unexpected string value",
+          "type": "something_random_cfd39ba4",
+          "value": "true",
+          "valueId": {
+            "keys": [
+              {
+                "type": "GlobalReference",
+                "value": "something_random_6419ef8c"
+              }
+            ],
+            "type": "GlobalReference"
+          },
+          "valueType": "xs:boolean"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+name: CI
+
+on:
+  push:
+    branches: [ master, main ]
+    tags: [ "**" ]
+  pull_request:
+    branches: [ "**" ]
+
+jobs:
+  Build-lint-and-test:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [14.x, 16.x, 18.x]
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          # NOTE (mristin, 2022-12-10):
+          # For why we set these variables, see this StackOverflow answer:
+          # https://stackoverflow.com/a/65615948/1600678
+          repo-token: ${{ github.token }}
+          repository: ${{ github.repository }}
+          GITHUB_TOKEN: ${{ github.token }}
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
+          cache-dependency-path: 'package-lock.json'
+      - run: npm ci
+      - run: npm run build
+      - run: npm run lint
+      - run: npm run test
+        env:
+          AAS_CORE3_0_RC02_TYPESCRIPT_TEST_DATA_DIR: test_data
+
+      - name: Coveralls GitHub Action
+        if: github.repository == 'aas-core-works/aas-core3.0rc02-typescript' && matrix.node-version == '14.x'
+        uses: coverallsapp/github-action@master
+        with:
+          github-token: ${{ github.token }}

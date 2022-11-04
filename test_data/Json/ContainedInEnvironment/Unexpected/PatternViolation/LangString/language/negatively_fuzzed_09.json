@@ -1,0 +1,17 @@
+{
+  "assetAdministrationShells": [
+    {
+      "assetInformation": {
+        "assetKind": "Instance"
+      },
+      "displayName": [
+        {
+          "language": "p\u00dc\ud9ce\udfcb\u00aeA\u00c7",
+          "text": "something_random_56d2caa9"
+        }
+      ],
+      "id": "something_random_428f0205",
+      "modelType": "AssetAdministrationShell"
+    }
+  ]
+}
