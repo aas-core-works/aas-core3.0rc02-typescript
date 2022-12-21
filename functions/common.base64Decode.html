@@ -22,6 +22,11 @@
 <li class="tsd-description">
 <div class="tsd-comment tsd-typography"><p>Decode a base64-encoded byte array.</p>
 
+<h3>Remarks</h3><p>We provide our own implementation so that we do not run into compatibility
+issues with node.js, different browsers etc.
+See:
+<a href="https://stackoverflow.com/questions/21797299/convert-base64-string-to-arraybuffer">https://stackoverflow.com/questions/21797299/convert-base64-string-to-arraybuffer</a></p>
+
 <h3>Returns</h3><p>either the array or an error, if <code>text</code> is not a valid base64 encoding</p>
 </div>
 <div class="tsd-parameters">
@@ -33,7 +38,7 @@
 </div></li></ul></div>
 <h4 class="tsd-returns-title">Returns <a href="../classes/common.Either.html" class="tsd-signature-type" data-tsd-kind="Class">Either</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Uint8Array</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/aas-core-works/aas-core3.0rc02-typescript/blob/7d56c5a/src/common.ts#L218">common.ts:218</a></li></ul></aside></li></ul></section></div>
+<li>Defined in <a href="https://github.com/aas-core-works/aas-core3.0rc02-typescript/blob/f5d40f1/src/common.ts#L230">common.ts:230</a></li></ul></aside></li></ul></section></div>
 <div class="col-4 col-menu menu-sticky-wrap menu-highlight">
 <div class="tsd-navigation settings">
 <details class="tsd-index-accordion"><summary class="tsd-accordion-summary">
@@ -58,6 +63,7 @@
 <li class="current tsd-kind-namespace"><a href="../modules/common.html">common</a></li>
 <li class="tsd-kind-namespace"><a href="../modules/constants.html">constants</a></li>
 <li class="tsd-kind-namespace"><a href="../modules/jsonization.html">jsonization</a></li>
+<li class="tsd-kind-namespace"><a href="../modules/stringification.html">stringification</a></li>
 <li class="tsd-kind-namespace"><a href="../modules/types.html">types</a></li>
 <li class="tsd-kind-namespace"><a href="../modules/verification.html">verification</a></li></ul></li></ul></div></details></nav>
 <nav class="tsd-navigation secondary menu-sticky">
