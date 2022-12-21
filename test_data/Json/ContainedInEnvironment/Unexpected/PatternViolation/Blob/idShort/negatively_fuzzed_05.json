@@ -1,0 +1,15 @@
+{
+  "submodels": [
+    {
+      "id": "something_random_b0c234ba",
+      "modelType": "Submodel",
+      "submodelElements": [
+        {
+          "contentType": "application/something-random",
+          "idShort": "\u00a5&J\u0013\ud95c\udd24",
+          "modelType": "Blob"
+        }
+      ]
+    }
+  ]
+}

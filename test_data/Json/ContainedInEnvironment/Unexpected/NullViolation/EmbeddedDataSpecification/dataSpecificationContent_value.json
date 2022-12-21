@@ -1,0 +1,25 @@
+{
+  "assetAdministrationShells": [
+    {
+      "assetInformation": {
+        "assetKind": "Instance"
+      },
+      "embeddedDataSpecifications": [
+        {
+          "dataSpecification": {
+            "keys": [
+              {
+                "type": "GlobalReference",
+                "value": "something_random_88965b19"
+              }
+            ],
+            "type": "GlobalReference"
+          },
+          "dataSpecificationContent": null
+        }
+      ],
+      "id": "something_random_428f0205",
+      "modelType": "AssetAdministrationShell"
+    }
+  ]
+}

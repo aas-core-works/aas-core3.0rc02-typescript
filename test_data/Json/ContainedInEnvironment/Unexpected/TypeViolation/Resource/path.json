@@ -1,0 +1,23 @@
+{
+  "assetAdministrationShells": [
+    {
+      "assetInformation": {
+        "assetKind": "Instance",
+        "defaultThumbnail": {
+          "contentType": "application/something-random",
+          "path": {
+            "keys": [
+              {
+                "type": "GlobalReference",
+                "value": "something_random_d5a644bd"
+              }
+            ],
+            "type": "GlobalReference"
+          }
+        }
+      },
+      "id": "something_random_428f0205",
+      "modelType": "AssetAdministrationShell"
+    }
+  ]
+}

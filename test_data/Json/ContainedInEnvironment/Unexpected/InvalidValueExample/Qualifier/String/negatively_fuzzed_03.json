@@ -1,0 +1,15 @@
+{
+  "submodels": [
+    {
+      "id": "something_random_b0c234ba",
+      "modelType": "Submodel",
+      "qualifiers": [
+        {
+          "type": "something_random_cfd39ba4",
+          "value": "\u0091\u00c8\u00ca\u0000\ud826\udfec",
+          "valueType": "xs:string"
+        }
+      ]
+    }
+  ]
+}

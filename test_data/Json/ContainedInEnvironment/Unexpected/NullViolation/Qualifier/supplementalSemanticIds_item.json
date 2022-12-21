@@ -1,0 +1,17 @@
+{
+  "submodels": [
+    {
+      "id": "something_random_b0c234ba",
+      "modelType": "Submodel",
+      "qualifiers": [
+        {
+          "supplementalSemanticIds": [
+            null
+          ],
+          "type": "something_random_cfd39ba4",
+          "valueType": "xs:boolean"
+        }
+      ]
+    }
+  ]
+}

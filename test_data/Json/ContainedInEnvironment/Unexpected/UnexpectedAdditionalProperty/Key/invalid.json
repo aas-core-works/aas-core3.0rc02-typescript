@@ -1,0 +1,21 @@
+{
+  "assetAdministrationShells": [
+    {
+      "assetInformation": {
+        "assetKind": "Instance"
+      },
+      "derivedFrom": {
+        "keys": [
+          {
+            "type": "AssetAdministrationShell",
+            "unexpectedAdditionalProperty": "INVALID",
+            "value": "44e7dc4a"
+          }
+        ],
+        "type": "ModelReference"
+      },
+      "id": "something_random_428f0205",
+      "modelType": "AssetAdministrationShell"
+    }
+  ]
+}

@@ -1,0 +1,2 @@
+.submodels[0].submodelElements[0].minInterval: The value must match the pattern of xs:dateTimeStamp with the time zone fixed to UTC.
+.submodels[0].submodelElements[0].minInterval: The value must represent a valid xs:dateTimeStamp with the time zone fixed to UTC.

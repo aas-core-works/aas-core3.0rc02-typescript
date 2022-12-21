@@ -1,0 +1,2 @@
+.submodels[0]: Supplemental semantic IDs must be either not set or have at least one item
+.submodels[0]: Constraint AASd-118: If there are supplemental semantic IDs defined then there shall be also a main semantic ID.

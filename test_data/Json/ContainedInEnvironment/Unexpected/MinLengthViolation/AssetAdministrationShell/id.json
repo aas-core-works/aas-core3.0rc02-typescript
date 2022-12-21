@@ -1,0 +1,11 @@
+{
+  "assetAdministrationShells": [
+    {
+      "assetInformation": {
+        "assetKind": "Instance"
+      },
+      "id": "",
+      "modelType": "AssetAdministrationShell"
+    }
+  ]
+}

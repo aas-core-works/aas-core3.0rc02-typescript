@@ -1,0 +1,7 @@
+requirements.txt
+setup.py
+aas_core3.0rc02_typescript_testgen.egg-info/PKG-INFO
+aas_core3.0rc02_typescript_testgen.egg-info/SOURCES.txt
+aas_core3.0rc02_typescript_testgen.egg-info/dependency_links.txt
+aas_core3.0rc02_typescript_testgen.egg-info/requires.txt
+aas_core3.0rc02_typescript_testgen.egg-info/top_level.txt

@@ -1,0 +1,2 @@
+.submodels[0].submodelElements[0]: Constraint AASd-090: For data elements category shall be one of the following values: CONSTANT, PARAMETER or VARIABLE
+.submodels[0].submodelElements[0].category: Constraint AASd-100: An attribute with data type ``string`` is not allowed to be empty.

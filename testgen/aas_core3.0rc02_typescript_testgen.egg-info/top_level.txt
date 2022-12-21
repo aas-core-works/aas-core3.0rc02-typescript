@@ -1,0 +1,1 @@
+aas_core_3_0_rc2_typescript_testgen

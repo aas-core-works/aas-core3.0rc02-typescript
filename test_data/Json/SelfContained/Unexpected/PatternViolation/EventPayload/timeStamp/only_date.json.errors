@@ -1,0 +1,2 @@
+.timeStamp: The value must match the pattern of xs:dateTimeStamp with the time zone fixed to UTC.
+.timeStamp: The value must represent a valid xs:dateTimeStamp with the time zone fixed to UTC.

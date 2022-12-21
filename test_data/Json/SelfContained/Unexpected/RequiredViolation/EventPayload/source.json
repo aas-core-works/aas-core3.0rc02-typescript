@@ -1,0 +1,16 @@
+{
+  "observableReference": {
+    "keys": [
+      {
+        "type": "Submodel",
+        "value": "something_random_b10c3750"
+      },
+      {
+        "type": "Blob",
+        "value": "something_random_65b526ce"
+      }
+    ],
+    "type": "ModelReference"
+  },
+  "timeStamp": "2022-04-01T01:02:03Z"
+}

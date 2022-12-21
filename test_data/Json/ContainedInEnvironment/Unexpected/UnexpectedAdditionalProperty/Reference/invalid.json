@@ -1,0 +1,18 @@
+{
+  "submodels": [
+    {
+      "id": "some_submodel",
+      "modelType": "Submodel",
+      "semanticId": {
+        "keys": [
+          {
+            "type": "GlobalReference",
+            "value": "something_random_920ea681"
+          }
+        ],
+        "type": "GlobalReference",
+        "unexpectedAdditionalProperty": "INVALID"
+      }
+    }
+  ]
+}

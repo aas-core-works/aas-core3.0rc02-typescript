@@ -1,0 +1,14 @@
+{
+  "assetAdministrationShells": [
+    {
+      "assetInformation": {
+        "assetKind": "Instance",
+        "defaultThumbnail": {
+          "path": "s\ud82b\udcc1\ud9e3\uddd0\u00c5\\H\udac2\ude13"
+        }
+      },
+      "id": "something_random_428f0205",
+      "modelType": "AssetAdministrationShell"
+    }
+  ]
+}

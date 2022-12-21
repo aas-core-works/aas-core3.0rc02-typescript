@@ -1,0 +1,18 @@
+{
+  "assetAdministrationShells": [
+    {
+      "assetInformation": {
+        "assetKind": "Instance"
+      },
+      "extensions": [
+        {
+          "name": "something_random_8ddedf5d",
+          "value": "\ud805\udf70\ud8ea\udcafZ5\u001b \udbd5\udfb3\u00eb{\u00c2",
+          "valueType": "xs:boolean"
+        }
+      ],
+      "id": "something_random_428f0205",
+      "modelType": "AssetAdministrationShell"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "submodels": [
+    {
+      "id": "some_submodel",
+      "modelType": "Submodel",
+      "semanticId": {
+        "keys": null,
+        "type": "GlobalReference"
+      }
+    }
+  ]
+}

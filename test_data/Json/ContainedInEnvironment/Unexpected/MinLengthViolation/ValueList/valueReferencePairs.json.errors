@@ -1,0 +1,2 @@
+.assetAdministrationShells[0].embeddedDataSpecifications[0].dataSpecificationContent: Constraint AASc-010: If value is not empty then value list shall be empty and vice versa.
+.assetAdministrationShells[0].embeddedDataSpecifications[0].dataSpecificationContent.valueList: Value reference pair types must contain at least one item.

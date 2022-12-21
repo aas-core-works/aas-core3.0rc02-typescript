@@ -1,0 +1,14 @@
+{
+  "submodels": [
+    {
+      "id": "something_random_b0c234ba",
+      "modelType": "Submodel",
+      "submodelElements": [
+        {
+          "idShort": "M\u00c7j",
+          "modelType": "MultiLanguageProperty"
+        }
+      ]
+    }
+  ]
+}

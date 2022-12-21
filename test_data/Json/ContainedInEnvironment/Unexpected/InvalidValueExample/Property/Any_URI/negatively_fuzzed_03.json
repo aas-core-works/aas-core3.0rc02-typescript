@@ -1,0 +1,16 @@
+{
+  "submodels": [
+    {
+      "id": "something_random_b0c234ba",
+      "modelType": "Submodel",
+      "submodelElements": [
+        {
+          "idShort": "some_id_short_10b21b1b",
+          "modelType": "Property",
+          "value": "W:\ud842\uddb3\u0013\u008f\u00a89\u0083",
+          "valueType": "xs:anyURI"
+        }
+      ]
+    }
+  ]
+}

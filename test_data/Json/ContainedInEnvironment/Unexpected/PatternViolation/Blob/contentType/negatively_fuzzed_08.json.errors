@@ -1,0 +1,2 @@
+.submodels[0].submodelElements[0].contentType: Constraint AASd-100: An attribute with data type ``string`` is not allowed to be empty.
+.submodels[0].submodelElements[0].contentType: The value must represent a valid content MIME type according to RFC 2046.

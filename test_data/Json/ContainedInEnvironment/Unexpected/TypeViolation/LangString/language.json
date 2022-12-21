@@ -1,0 +1,25 @@
+{
+  "assetAdministrationShells": [
+    {
+      "assetInformation": {
+        "assetKind": "Instance"
+      },
+      "displayName": [
+        {
+          "language": {
+            "keys": [
+              {
+                "type": "GlobalReference",
+                "value": "something_random_500492f8"
+              }
+            ],
+            "type": "GlobalReference"
+          },
+          "text": "something_random_56d2caa9"
+        }
+      ],
+      "id": "something_random_428f0205",
+      "modelType": "AssetAdministrationShell"
+    }
+  ]
+}
