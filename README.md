@@ -1,5 +1,7 @@
 # aas-core3.0rc02-typescript
 
+Manipulate, verify and de/serialize Asset Administration Shells based on the version 3.0VRC02 of the meta-model. 
+
 [![CI](https://github.com/aas-core-works/aas-core3.0rc02-typescript/actions/workflows/ci.yml/badge.svg)](https://github.com/aas-core-works/aas-core3.0rc02-typescript/actions/workflows/ci.yml)
 [![Coverage Status](https://coveralls.io/repos/github/aas-core-works/aas-core3.0rc02-typescript/badge.svg?branch=main)](https://coveralls.io/github/aas-core-works/aas-core3.0rc02-typescript?branch=main)
 
@@ -94,17 +96,17 @@ Here is a very rudimentary example where we show how to create an environment wh
 The submodel will contain two elements, a property and a blob.
 
 ```typescript
-import * as types from "@aas-core-works/aas-core3.0rc02-typescript/types";
+import * as aas from "@aas-core-works/aas-core3.0rc02-typescript";
 
 // Create the first element
-const someElement = new types.Property(
-  types.DataTypeDefXsd.INT
+const someElement = new aas.types.Property(
+  aas.types.DataTypeDefXsd.Int
 );
 someElement.idShort = "someProperty";
 someElement.value = "1984";
 
 // Create the second element
-const anotherElement = new types.Blob(
+const anotherElement = new aas.types.Blob(
   "application/octet-stream"
 );
 anotherElement.idShort = "someBlob";
@@ -114,7 +116,7 @@ anotherElement.value = new Uint8Array([0xDE, 0xAD, 0xBE, 0xEF]);
 anotherElement.value = new Uint8Array([0xDE, 0xAD, 0xC0, 0xDE]); 
 
 // Nest the elements in a submodel
-const submodel = new types.Submodel(
+const submodel = new aas.types.Submodel(
   "some-unique-global-identifier"
 );
 submodel.submodelElements = [
@@ -123,11 +125,11 @@ submodel.submodelElements = [
 ];
 
 // Now create the environment to wrap it all up
-const environment = new types.Environment();
+const environment = new aas.types.Environment();
 environment.submodels = [submodel];
 
 // You can access the propreties from the children as well.
-environment.submodels[0].submodelElements[1].value =
+(<aas.types.Blob>environment.submodels![0].submodelElements![1]).value =
   new Uint8Array([0xC0, 0x01, 0xCA, 0xFE]);
 
 // Now you can do something with the `environment`...
@@ -155,19 +157,19 @@ Otherwise, the function returns `null`.
 Here is a short example with [`types.asProperty`] and [`types.asBlob`]:
 
 ```typescript
-import * as types from "@aas-core-works/aas-core3.0rc02-typescript/types";
+import * as aas from "@aas-core-works/aas-core3.0rc02-typescript";
 
 // Create the first element
-const someElement = new types.Property(
-  types.DataTypeDefXsd.INT
+const someElement = new aas.types.Property(
+  aas.types.DataTypeDefXsd.Int
 );
 someElement.idShort = "someProperty";
 someElement.value = "1984";
 
-console.log(types.asProperty(someElement) === someElement)
+console.log(aas.types.asProperty(someElement) === someElement)
 // Prints: true
 
-console.log(types.asBlob(someElement) === null);
+console.log(aas.types.asBlob(someElement) === null);
 // Prints: true
 ```
 
@@ -177,25 +179,25 @@ Thanks to [TypeScript type assertions] provided in its signature, the TypeScript
 Here is a short example with [`types.isProperty`] and [`types.isBlob`]:
 
 ```typescript
-import * as types from "@aas-core-works/aas-core3.0rc02-typescript/types";
+import * as aas from "@aas-core-works/aas-core3.0rc02-typescript";
 
 // Create the first element
-const someElement = new types.Property(
-  types.DataTypeDefXsd.INT
+const someElement = new aas.types.Property(
+  aas.types.DataTypeDefXsd.Int
 );
 someElement.idShort = "someProperty";
 someElement.value = "1984";
 
-console.log(types.isProperty(someElement))
+console.log(aas.types.isProperty(someElement))
 // Prints: true
 
-console.log(types.isBlob(someElement));
+console.log(aas.types.isBlob(someElement));
 // Prints: false
 
-if (types.isProperty(someElement)) {
+if (aas.types.isProperty(someElement)) {
   // TypeScript compiler will automatically infer that `someElement`
   // is a `types.Property` thanks to type assertions from
-  // `types.isProperty`. 
+  // `types.isProperty`.
   console.log(someElement.value);
   // Prints: 1984
 }
@@ -241,28 +243,28 @@ The method [`descend`] continues recursively to grand-children, grand-grand-chil
 Here is a short example how you can get all the properties from an environment whose ID-short starts with another:
 
 ```typescript
-import * as types from "@aas-core-works/aas-core3.0rc02-typescript/types";
+import * as aas from "@aas-core-works/aas-core3.0rc02-typescript";
 
 // Prepare the environment
-const someElement = new types.Property(
-  types.DataTypeDefXsd.INT
+const someElement = new aas.types.Property(
+  aas.types.DataTypeDefXsd.Int
 );
 someElement.idShort = "someProperty";
 someElement.value = "1984";
 
-const anotherElement = new types.Property(
-  types.DataTypeDefXsd.INT
+const anotherElement = new aas.types.Property(
+  aas.types.DataTypeDefXsd.Int
 );
 anotherElement.idShort = "anotherProperty";
 anotherElement.value = "1985";
 
-const yetAnotherElement = new types.Property(
-  types.DataTypeDefXsd.INT
+const yetAnotherElement = new aas.types.Property(
+  aas.types.DataTypeDefXsd.Int
 );
 yetAnotherElement.idShort = "yetAnotherProperty";
 yetAnotherElement.value = "1986";
 
-const submodel = new types.Submodel(
+const submodel = new aas.types.Submodel(
   "some-unique-global-identifier"
 );
 submodel.submodelElements = [
@@ -271,14 +273,14 @@ submodel.submodelElements = [
   yetAnotherElement
 ];
 
-const environment = new types.Environment();
+const environment = new aas.types.Environment();
 environment.submodels = [submodel];
 
 // Iterate using `descend`
 for (const something of environment.descend()) {
   if (
-    types.isProperty(something)
-    && something.idShort?.includes("another")
+    aas.types.isProperty(something)
+    && something.idShort?.toLowerCase().includes("another")
   ) {
     console.log(something.idShort);
   }
@@ -326,29 +328,28 @@ In the SDK, we provide different flavors of the visitor abstract classes which y
 Let us re-write the above example related to [`descend`] method with a visitor pattern: 
 
 ```typescript
-
-import * as types from "@aas-core-works/aas-core3.0rc02-typescript/types";
+import * as aas from "@aas-core-works/aas-core3.0rc02-typescript";
 
 // Prepare the environment
-const someElement = new types.Property(
-  types.DataTypeDefXsd.INT
+const someElement = new aas.types.Property(
+  aas.types.DataTypeDefXsd.Int
 );
 someElement.idShort = "someProperty";
 someElement.value = "1984";
 
-const anotherElement = new types.Property(
-  types.DataTypeDefXsd.INT
+const anotherElement = new aas.types.Property(
+  aas.types.DataTypeDefXsd.Int
 );
 anotherElement.idShort = "anotherProperty";
 anotherElement.value = "1985";
 
-const yetAnotherElement = new types.Property(
-  types.DataTypeDefXsd.INT
+const yetAnotherElement = new aas.types.Property(
+  aas.types.DataTypeDefXsd.Int
 );
 yetAnotherElement.idShort = "yetAnotherProperty";
 yetAnotherElement.value = "1986";
 
-const submodel = new types.Submodel(
+const submodel = new aas.types.Submodel(
   "some-unique-global-identifier"
 );
 submodel.submodelElements = [
@@ -357,15 +358,15 @@ submodel.submodelElements = [
   yetAnotherElement
 ];
 
-const environment = new types.Environment();
+const environment = new aas.types.Environment();
 environment.submodels = [submodel];
 
 // Implement the visitor
-class Visitor extends types.PassThroughVisitor {
-  visitProperty(that: types.Property): void {
-    if (that.idShort?.includes("another")) {
+class Visitor extends aas.types.PassThroughVisitor {
+  visitProperty(that: aas.types.Property): void {
+    if (that.idShort?.toLowerCase().includes("another")) {
       console.log(that.idShort);
-    } 
+    }
   }
 }
 
@@ -447,13 +448,12 @@ Here is a short example that illustrates how to loop over enumeration literals o
 [`types.overModelingKind`]: https://aas-core-works.github.io/aas-core3.0rc02-typescript/functions/types.overModelingKind.html
 
 ```typescript
-import * as types from "@aas-core-works/aas-core3.0rc02-typescript/types";
-import * as stringification from "@aas-core-works/aas-core3.0rc02-typescript/stringification";
+import * as aas from "@aas-core-works/aas-core3.0rc02-typescript";
 
-for (const literal of AasTypes.overModelingKind()) {
-  const asString = stringification.mustModelingKindToString(literal);
+for (const literal of aas.types.overModelingKind()) {
+  const asString = aas.stringification.mustModelingKindToString(literal);
   console.log(
-    `${literal} ${typeof(literal)} ${asString}`
+    `${literal} ${typeof (literal)} ${asString}`
   );
 }
 // Prints:
@@ -476,27 +476,26 @@ The function returns an [`IterableIterator`] of [`verification.VerificationError
 Here is a short example snippet:
 
 ```typescript
-import * as types from "@aas-core-works/aas-core3.0rc02-typescript/types";
-import * as verification from "@aas-core-works/aas-core3.0rc02-typescript/verification";
+import * as aas from "@aas-core-works/aas-core3.0rc02-typescript";
 
 // Prepare the environment
-const someElement = new types.Property(
-  types.DataTypeDefXsd.INT
+const someElement = new aas.types.Property(
+  aas.types.DataTypeDefXsd.Int
 );
 // The ID-shorts must be proper variable names,
 // but there is a dash (`-`) in this ID-short. 
 someElement.idShort = "some-property";
 someElement.value = "1984";
 
-const submodel = new types.Submodel(
+const submodel = new aas.types.Submodel(
   "some-unique-global-identifier"
 );
 submodel.submodelElements = [someElement];
 
-const environment = new types.Environment();
+const environment = new aas.types.Environment();
 environment.submodels = [submodel];
 
-for (const error of verification.verify(environment)) {
+for (const error of aas.verification.verify(environment)) {
   console.log(`${error.path}: ${error.message}`);
 }
 
@@ -561,26 +560,25 @@ To serialize, you call the function [`jsonization.toJsonable`] on an instance of
 Here is a snippet that converts the environment first into a JSON-able object, and next converts the JSON-able object to text:
 
 ```typescript
-import * as jsonization from "@aas-core-works/aas-core3.0rc02-typescript/jsonization";
-import * as types from "@aas-core-works/aas-core3.0rc02-typescript/types";
+import * as aas from "@aas-core-works/aas-core3.0rc02-typescript";
 
 // Prepare the environment
-const someElement = new types.Property(
-  types.DataTypeDefXsd.INT
+const someElement = new aas.types.Property(
+  aas.types.DataTypeDefXsd.Int
 );
 someElement.idShort = "someProperty";
 someElement.value = "1984";
 
-const submodel = new types.Submodel(
+const submodel = new aas.types.Submodel(
   "some-unique-global-identifier"
 );
 submodel.submodelElements = [someElement];
 
-const environment = new types.Environment();
+const environment = new aas.types.Environment();
 environment.submodels = [submodel];
 
 // Serialize to a JSON-able object
-const jsonable = jsonization.toJsonable();
+const jsonable = aas.jsonization.toJsonable(environment);
 
 // Convert the JSON-able object to a string
 const text = JSON.stringify(jsonable, null, 2);
@@ -634,7 +632,7 @@ Stack unwinding makes sense if you want since the line of code is irrelevant in 
 Here is an example snippet to show you how to de-serialize an instance of [`types.Environment`]:
 
 ```typescript
-import * as jsonization from "@aas-core-works/aas-core3.0rc02-typescript/jsonization";
+import * as aas from "@aas-core-works/aas-core3.0rc02-typescript";
 
 const text = `
 {
@@ -656,7 +654,7 @@ const text = `
 
 const jsonable = JSON.parse(text);
 
-const instanceOrError = jsonization.environmentFromJsonable(
+const instanceOrError = aas.jsonization.environmentFromJsonable(
   jsonable
 );
 if (instanceOrError.error !== null) {
