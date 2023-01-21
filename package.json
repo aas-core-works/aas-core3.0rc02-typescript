@@ -24,7 +24,7 @@
   },
   "homepage": "https://github.com/aas-core-works/aas-core3.0rc02-typescript/issues",
   "scripts": {
-    "build": "tsup --dts --format esm,cjs",
+    "build": "tsup --dts --format esm,cjs --target=es2015,node14",
     "lint": "eslint . --ext .ts",
     "test": "jest --coverage",
     "format": "prettier --config .prettierrc \"src/**/*.ts\" \"test/**/*.ts\" \"*.ts\" --write"
