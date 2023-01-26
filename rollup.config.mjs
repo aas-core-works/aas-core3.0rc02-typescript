@@ -17,19 +17,6 @@ export default {
       format: "esm",
       plugins: [terser()],
       sourcemap: true
-    },
-    {
-      file: "dist/bundles/bundle.umd.js",
-      format: "umd",
-      name: "myLibrary",
-      sourcemap: true
-    },
-    {
-      file: "dist/bundles/bundle.umd.min.js",
-      format: "umd",
-      name: "myLibrary",
-      plugins: [terser()],
-      sourcemap: true
     }
   ],
   plugins: [
