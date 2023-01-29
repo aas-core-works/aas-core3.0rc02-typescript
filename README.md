@@ -212,6 +212,40 @@ if (aas.types.isProperty(someElement)) {
 [`types.isProperty`]: https://aas-core-works.github.io/aas-core3.0rc02-typescript/functions/types.isProperty.html
 [`types.isBlob`]: https://aas-core-works.github.io/aas-core3.0rc02-typescript/types.isBlob.html
 
+The `is*` and `as*` functions assume that you know the expected type in the check ahead of time.
+This does not work if you use a prototype to define a type, or want to check whether two instances share the same type, since you can not extract the type information from an instance.
+For those situations, we provide [`typesMatch`] function:
+
+```typescript
+import * as aas from "@aas-core-works/aas-core3.0rc02-typescript";
+
+// Create a property
+const aProperty = new aas.types.Property(
+  aas.types.DataTypeDefXsd.Int
+);
+
+// Create a blob
+const aBlob = new aas.types.Blob(
+  "text/plain"
+);
+
+// Create another property
+const anotherProperty = new aas.types.Property(
+  aas.types.DataTypeDefXsd.Decimal
+);
+
+// Check the type matches
+
+console.log(aas.types.typesMatch(aProperty, aProperty))
+// Prints: true
+
+console.log(aas.types.typesMatch(aProperty, aBlob))
+// Prints: false
+
+console.log(aas.types.typesMatch(aProperty, anotherProperty))
+// Prints: true
+```
+
 ### Iterate and Transform
 
 The SDK provides various ways how you can loop through the elements of the model, and how these elements can be transformed.
