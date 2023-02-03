@@ -1,7 +1,7 @@
 {
   "name": "@aas-core-works/aas-core3.0rc02-typescript",
   "private": false,
-  "version": "1.0.0-rc.5",
+  "version": "1.0.0-rc.6",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/aas-core-works/aas-core3.0rc02-typescript"

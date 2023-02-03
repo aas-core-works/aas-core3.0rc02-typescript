@@ -944,6 +944,10 @@ The commit messages follow the guidelines from https://chris.beams.io/posts/git-
 
 ## Changelog
 
+### 1.0.0-rc.6 (2023-02-03)
+
+* Verify constrained primitives in non-recursion (#9)
+
 ### 1.0.0-rc.5
 
 * Add type matching between two instances (#7)
